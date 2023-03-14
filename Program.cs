@@ -1,23 +1,23 @@
 ﻿Console.Clear();
 
-Console.Write("Сколько элементов Вы хотите ввести: ");
-int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Сколько элементов Вы хотите ввести: "); // Узнаем размер массива
+int size = Convert.ToInt32(Console.ReadLine());  
 
-string[] arrString = new string[size];
-for (int i = 0; i < size; i++)
+string[] arrString = new string[size];  // Объявляем массив строк
+for (int i = 0; i < size; i++) // Цикл для заполнения массива с клавиатуры
 {
-    Console.Write("Введите строку №{0}:\r\n    ", i + 1);
+    Console.Write("Введите строку №{0}:\r\n    ", i + 1);  
     arrString[i] = Console.ReadLine();
 }
 Console.WriteLine();
-Console.WriteLine("Вы ввели следующие строки: ");
+Console.WriteLine("Вы ввели следующие строки: "); // Вывод получившегося массива для удобства
 for (int i = 0; i < size; i++)
 {
     Console.WriteLine(arrString[i]);
 }
 var result = new string[arrString.Length];
 var count = 0;
-foreach (var value in arrString)
+foreach (var value in arrString) // Цикл для нахождения элементов короче 3 символов
 {
     if (value.Length <= 3)
     {
@@ -27,4 +27,4 @@ foreach (var value in arrString)
 }
 Console.WriteLine();
 Console.WriteLine("Строки массива, длина которых меньше либо ровна 3 символам: ");
-Console.WriteLine(string.Join(Environment.NewLine, result, 0, count));
+Console.WriteLine(string.Join(Environment.NewLine, result, 0, count)); 
