@@ -26,3 +26,5 @@ foreach (var value in arrString)
     }
 }
 Console.WriteLine();
+Console.WriteLine("Строки массива, длина которых меньше либо ровна 3 символам: ");
+Console.WriteLine(string.Join(Environment.NewLine, result, 0, count));
